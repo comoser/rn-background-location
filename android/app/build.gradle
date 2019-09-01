@@ -131,6 +131,7 @@ android {
         applicationId "com.rnbglocation"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
+        multiDexEnabled true
         versionCode 1
         versionName "1.0"
     }
@@ -190,6 +191,9 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.facebook.react:react-native:+"  // From node_modules
+    implementation "com.google.android.gms:play-services:12.0.1"
+    implementation "com.google.code.gson:gson:2.8.5"
+    implementation "com.android.support:multidex:1.0.3"
 
     if (enableHermes) {
       def hermesPath = "../../node_modules/hermesvm/android/";

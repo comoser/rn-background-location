@@ -2,7 +2,7 @@
 
 ### This is a demo app for a fully functional background location app for Android only.
 
-The Medium article explaining the creation of this demo is available here: xxx
+## The Medium article explaining the creation of this demo is available here: [React-Native Background Location](https://medium.com/xgeeks/react-native-background-location-5602205ec795)
 
 It's based on several native Android APIs so if you want to use this, you'll have to have your project "ejected".
 

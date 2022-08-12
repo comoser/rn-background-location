@@ -111,7 +111,7 @@ public class LocationForegroundService extends Service implements LocationEventR
 
     private Notification createNotification() {
         Intent notificationIntent = new Intent(this, MainActivity.class);
-        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, PendingIntent.FLAG_IMMUTABLE);
 
         return new NotificationCompat.Builder(this, CHANNEL_ID)
                 .setContentIntent(pendingIntent)
@@ -120,6 +120,6 @@ public class LocationForegroundService extends Service implements LocationEventR
 
     private void createLocationPendingIntent() {
         Intent i = new Intent(getApplicationContext(), LocationBackgroundService.class);
-        mLocationBackgroundServicePendingIntent = PendingIntent.getService(getApplicationContext(), 1, i, PendingIntent.FLAG_UPDATE_CURRENT);
+        mLocationBackgroundServicePendingIntent = PendingIntent.getService(getApplicationContext(), 1, i, PendingIntent.FLAG_IMMUTABLE);
     }
 }
